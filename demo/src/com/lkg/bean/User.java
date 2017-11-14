@@ -1,9 +1,12 @@
 package com.lkg.bean;
 
+import java.util.List;
+
 public class User {
 	private String name;
 	private int age;
 	private String sex;
+	private List<String> message;
 	public String getName() {
 		return name;
 	}
@@ -22,9 +25,15 @@ public class User {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
+	public List<String> getMessage() {
+		return message;
+	}
+	public void setMessage(List<String> message) {
+		this.message = message;
+	}
 	@Override
 	public String toString() {
-		return "User [name="+name+",age="+age+",sex="+sex+"]";
+		return "User [name="+name+",age="+age+",sex="+sex+",message="+message+"]";
 	}
 	
 }
