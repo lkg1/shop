@@ -28,20 +28,23 @@ public class TestUser {
 		List<String> messageList = userService.returnUser(user3).getMessage();
 		System.out.println(messageList);
 	}
-	static Map<String, Object> getUser(){
+	public static Map<String, Object> getUser(){
 		Map<String , Object> map = new HashMap<String, Object>();
-		List<String> message = new ArrayList<String>();
 		User user = new User();
 		user.setName("ad");
 		user.setAge(19);
 		user.setSex("女");
+		List<String> message = new ArrayList<String>();
 		message.add("我是个女孩儿");
-		message.clear();
+		user.setMessage(message);
+		System.out.println(user);
 		User user2 = new User();
 		user2.setName("adc");
 		user2.setAge(22);
 		user2.setSex("男");
-		message.add("我是个男孩儿");
+		List<String> message3 = new ArrayList<String>();
+		message3.add("我是个男孩儿");
+		user2.setMessage(message3);
 		map.put("user", user);
 		map.put("user2", user2);
 		return map;
